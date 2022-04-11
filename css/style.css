@@ -1,5 +1,5 @@
 /* Box Model Hack */
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -16,7 +16,8 @@ main {
   max-width: 1600px;
   height: 100vh;
   display: flex;
-  background: center / cover no-repeat url(../img/manuel-cosentino-n--CMLApjfI-unsplash.jpg);
+  background: center / cover no-repeat
+    url(../img/manuel-cosentino-n--CMLApjfI-unsplash.jpg);
   margin: 0 auto;
 }
 main > section {
@@ -45,7 +46,7 @@ h2 ~ div {
 }
 h1 {
   font-size: 9.8rem;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
 }
 .subheading,
 h2,
@@ -55,11 +56,14 @@ h2 ~ div {
 h2 {
   padding-top: 100px;
 }
-h2 ~ div span {
+h2 ~ div span,
+.seasonNav span {
   position: absolute;
 }
-h2 ~ div span:last-child {
-  color: rgba(0, 0, 0, .3);
+h2 ~ div span:last-child,
+.seasonNav a span:last-child,
+.seasonNav button span:last-child {
+  color: rgba(0, 0, 0, 0.3);
 }
 p {
   font-size: 2.4rem;
@@ -75,18 +79,47 @@ p {
 }
 
 .regionFirst > section:first-of-type {
-  background: #F98E80;
+  background: #f98e80;
   flex-grow: 1;
 }
-
 .regionFirst .image {
   flex-basis: 40%;
   background-repeat: no-repeat;
   background-size: cover;
   background: green;
 }
-
-.regionFirst > section:last-of-type {
-  flex-basis: 50%;
+.seasons {
+  width: 50%;
   padding: 0 10rem;
+  display: flex;
+  flex-direction: column;
+}
+.seasonBlurb {
+  flex-grow: 1;
+}
+.seasonNav {
+  font-size: 3rem;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.seasonNav a {
+  height: 100%;
+  flex-grow: 1;
+  color: #000;
+}
+
+.seasonNav button {
+  height: 100%;
+  flex-grow: 1;
+  color: #000;
+  background: none;
+  border: none;
+}
+
+.seasonNav button:hover,
+.seasonNav button:focus {
+  background: red;
+  cursor: pointer;
 }
