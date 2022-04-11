@@ -13,10 +13,11 @@ body {
 
 /* MAIN SECTION */
 main {
-  width: 100%;
+  max-width: 1600px;
   height: 100vh;
   display: flex;
   background: center / cover no-repeat url(../img/manuel-cosentino-n--CMLApjfI-unsplash.jpg);
+  margin: 0 auto;
 }
 main > section {
   max-width: 475px;
@@ -65,3 +66,27 @@ p {
 }
 
 /* FIRST REGION */
+
+.regionFirst {
+  display: flex;
+  height: 75vh;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.regionFirst > section:first-of-type {
+  background: #F98E80;
+  flex-grow: 1;
+}
+
+.regionFirst .image {
+  flex-basis: 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: green;
+}
+
+.regionFirst > section:last-of-type {
+  flex-basis: 50%;
+  padding: 0 10rem;
+}
