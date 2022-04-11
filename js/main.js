@@ -46,5 +46,5 @@ function updateImage(season) {
 function updateSeasonHeader(season) {
   document.querySelector(
     '.seasonBlurb h2'
-  ).innerText = `${season[0].toUpperCase()}${season.slice[1]} in Tokyo`;
+  ).innerText = `${season[0].toUpperCase()}${season.slice(1)} in Tokyo`;
 }
